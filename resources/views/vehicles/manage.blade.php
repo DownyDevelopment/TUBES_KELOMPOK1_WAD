@@ -114,6 +114,7 @@
                             <th class="px-6 py-3 text-left text-xs font-medium text-gray-400 uppercase tracking-wider">Student ID</th>
                             <th class="px-6 py-3 text-left text-xs font-medium text-gray-400 uppercase tracking-wider">Vehicle Number</th>
                             <th class="px-6 py-3 text-right text-xs font-medium text-gray-400 uppercase tracking-wider">Actions</th>
+                            <th class="px-6 py-3 text-left text-xs font-medium text-gray-400 uppercase tracking-wider">Waktu Masuk</th>
                         </tr>
                     </thead>
                     <tbody class="divide-y divide-gray-800">
@@ -126,6 +127,7 @@
                                 </div>
                             </td>
                             <td class="px-6 py-4 text-sm text-white vehicle-number">{{ $vehicle->license_plate }}</td>
+                            <td class="px-6 py-4 text-sm text-white">{{ $vehicle->entry_time ? $vehicle->entry_time->format('d/m/Y H:i') : '-' }}</td>
                             <td class="px-6 py-4 text-right text-sm font-medium space-x-3">
                                 <button onclick="editVehicle({{ $vehicle->id }})" class="text-purple-400 hover:text-purple-300">Edit</button>
                                 <button onclick="deleteVehicle({{ $vehicle->id }})" class="text-gray-400 hover:text-gray-300">Delete</button>
