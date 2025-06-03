@@ -55,6 +55,7 @@ class DashboardController extends Controller
             'vehicle_type' => 'required|in:car,motorcycle',
         ]);
 
+        $validated['entry_time'] = now();
         Vehicle::create($validated);
 
         return redirect()->route('vehicles.manage')

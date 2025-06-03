@@ -15,4 +15,8 @@ class Vehicle extends Model
         'student_id',
         'vehicle_type',
     ];
+
+    protected $casts = [
+        'entry_time' => 'datetime',
+    ];
 } 
