@@ -14,6 +14,7 @@ class Vehicle extends Model
         'student_name',
         'student_id',
         'vehicle_type',
+        'entry_time',
     ];
 
     protected $casts = [

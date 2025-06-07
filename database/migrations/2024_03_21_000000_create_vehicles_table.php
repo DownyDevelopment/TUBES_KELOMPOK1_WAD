@@ -17,6 +17,7 @@ return new class extends Migration
             $table->string('student_name');
             $table->string('student_id')->unique();
             $table->string('vehicle_type'); // car, motorcycle, etc.
+            $table->timestamp('entry_time')->nullable();
             $table->timestamps();
         });
     }
