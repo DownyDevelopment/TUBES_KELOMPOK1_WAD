@@ -14,6 +14,26 @@
     </style>
 </head>
 <body>
-    @yield('content')
+    <div class="flex min-h-screen">
+        <!-- Sidebar -->
+        <aside class="w-64 bg-gray-900 text-white flex-shrink-0">
+            <div class="h-16 flex items-center justify-center border-b border-gray-800">
+                <span class="text-xl font-bold">Menu</span>
+            </div>
+            <nav class="mt-4">
+                <ul class="space-y-2 px-4">
+                    <li><a href="{{ route('dashboard') }}" class="block py-2 px-3 rounded hover:bg-gray-800">Dashboard</a></li>
+                    <li><a href="{{ route('vehicles.manage') }}" class="block py-2 px-3 rounded hover:bg-gray-800">Kendaraan</a></li>
+                    <li><a href="{{ route('mahasiswa.index') }}" class="block py-2 px-3 rounded hover:bg-gray-800">Mahasiswa</a></li>
+                    <li><a href="{{ route('dosen.index') }}" class="block py-2 px-3 rounded hover:bg-gray-800">Dosen</a></li>
+                    <li><a href="{{ route('karyawan.index') }}" class="block py-2 px-3 rounded hover:bg-gray-800">Karyawan</a></li>
+                </ul>
+            </nav>
+        </aside>
+        <!-- Main Content -->
+        <main class="flex-1">
+            @yield('content')
+        </main>
+    </div>
 </body>
 </html>

@@ -7,6 +7,9 @@ use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\Auth\LoginController;
 use App\Http\Controllers\Auth\RegisterController;
 use App\Http\Controllers\DashboardController;
+use App\Http\Controllers\MahasiswaController;
+use App\Http\Controllers\DosenController;
+use App\Http\Controllers\KaryawanController;
 
 // Authentication Routes
 Route::get('/login', [LoginController::class, 'showLoginForm'])->name('login');
@@ -59,3 +62,10 @@ Route::middleware(['auth'])->group(function () {
     Route::put('/vehicles/{vehicle}', [DashboardController::class, 'update'])->name('vehicles.update');
     Route::delete('/vehicles/{vehicle}', [DashboardController::class, 'destroy'])->name('vehicles.destroy');
 });
+
+// CRUD Mahasiswa
+Route::resource('mahasiswa', MahasiswaController::class)->middleware('auth');
+// CRUD Dosen
+Route::resource('dosen', DosenController::class)->middleware('auth');
+// CRUD Karyawan
+Route::resource('karyawan', KaryawanController::class)->middleware('auth');
