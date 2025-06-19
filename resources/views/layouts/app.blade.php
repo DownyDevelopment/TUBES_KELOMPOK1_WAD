@@ -27,11 +27,12 @@
                     <li><a href="{{ route('mahasiswa.index') }}" class="block py-2 px-3 rounded hover:bg-gray-800">Mahasiswa</a></li>
                     <li><a href="{{ route('dosen.index') }}" class="block py-2 px-3 rounded hover:bg-gray-800">Dosen</a></li>
                     <li><a href="{{ route('karyawan.index') }}" class="block py-2 px-3 rounded hover:bg-gray-800">Karyawan</a></li>
+                    <li><a href="{{ route('feedback.index') }}" class="block py-2 px-3 rounded hover:bg-gray-800">Feedback</a></li>
                 </ul>
             </nav>
         </aside>
         <!-- Main Content -->
-        <main class="flex-1">
+        <main class="flex-1 min-h-screen bg-black text-white p-8">
             @yield('content')
         </main>
     </div>

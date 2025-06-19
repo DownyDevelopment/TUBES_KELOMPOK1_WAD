@@ -10,6 +10,7 @@ use App\Http\Controllers\DashboardController;
 use App\Http\Controllers\MahasiswaController;
 use App\Http\Controllers\DosenController;
 use App\Http\Controllers\KaryawanController;
+use App\Http\Controllers\FeedbackController;
 
 // Authentication Routes
 Route::get('/login', [LoginController::class, 'showLoginForm'])->name('login');
@@ -69,3 +70,8 @@ Route::resource('mahasiswa', MahasiswaController::class)->middleware('auth');
 Route::resource('dosen', DosenController::class)->middleware('auth');
 // CRUD Karyawan
 Route::resource('karyawan', KaryawanController::class)->middleware('auth');
+
+// CRUD Feedback
+Route::resource('feedback', FeedbackController::class)->only([
+    'index', 'create', 'store', 'edit', 'update', 'destroy'
+]);
