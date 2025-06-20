@@ -45,24 +45,31 @@
 
         <!-- Users Table -->
         <div class="bg-gray-900 rounded-lg overflow-hidden">
-            <table class="min-w-full divide-y divide-gray-800">
+            <table class="min-w-full divide-y divide-gray-800 text-white">
                 <thead>
                     <tr>
-                        <th class="px-6 py-3 text-left text-xs font-medium text-gray-400 uppercase tracking-wider">Student ID</th>
-                        <th class="px-6 py-3 text-left text-xs font-medium text-gray-400 uppercase tracking-wider">Vehicle Number</th>
-                        <th class="px-6 py-3 text-right text-xs font-medium text-gray-400 uppercase tracking-wider">Actions</th>
+                        <th class="px-6 py-3 text-left text-xs font-medium text-gray-400 uppercase tracking-wider">No</th>
+                        <th class="px-6 py-3 text-left text-xs font-medium text-gray-400 uppercase tracking-wider">Plat Nomor</th>
+                        <th class="px-6 py-3 text-left text-xs font-medium text-gray-400 uppercase tracking-wider">Merk</th>
+                        <th class="px-6 py-3 text-left text-xs font-medium text-gray-400 uppercase tracking-wider">Model</th>
+                        <th class="px-6 py-3 text-left text-xs font-medium text-gray-400 uppercase tracking-wider">Warna</th>
+                        <th class="px-6 py-3 text-left text-xs font-medium text-gray-400 uppercase tracking-wider">Nama Mahasiswa</th>
+                        <th class="px-6 py-3 text-left text-xs font-medium text-gray-400 uppercase tracking-wider">NIM</th>
+                        <th class="px-6 py-3 text-left text-xs font-medium text-gray-400 uppercase tracking-wider">Tipe Kendaraan</th>
+                        <th class="px-6 py-3 text-right text-xs font-medium text-gray-400 uppercase tracking-wider">Aksi</th>
                     </tr>
                 </thead>
                 <tbody class="divide-y divide-gray-800">
                     @foreach($vehicles as $vehicle)
-                    <tr class="hover:bg-gray-800 vehicle-row">
-                        <td class="px-6 py-4">
-                            <div>
-                                <div class="text-sm font-medium text-white">{{ $vehicle->student_name }}</div>
-                                <div class="text-sm text-gray-400 student-id">{{ $vehicle->student_id }}</div>
-                            </div>
-                        </td>
-                        <td class="px-6 py-4 text-sm text-white vehicle-number">{{ $vehicle->license_plate }}</td>
+                    <tr class="hover:bg-gray-800 vehicle-row text-white">
+                        <td class="px-6 py-4">{{ $loop->iteration }}</td>
+                        <td class="px-6 py-4">{{ $vehicle->license_plate }}</td>
+                        <td class="px-6 py-4">{{ $vehicle->brand }}</td>
+                        <td class="px-6 py-4">{{ $vehicle->model }}</td>
+                        <td class="px-6 py-4">{{ $vehicle->color }}</td>
+                        <td class="px-6 py-4">{{ $vehicle->student_name }}</td>
+                        <td class="px-6 py-4">{{ $vehicle->student_id }}</td>
+                        <td class="px-6 py-4">{{ ucfirst($vehicle->vehicle_type) }}</td>
                         <td class="px-6 py-4 text-right text-sm font-medium space-x-3">
                             <button onclick="editVehicle({{ $vehicle->id }})" class="text-purple-400 hover:text-purple-300">Edit</button>
                             <button onclick="deleteVehicle({{ $vehicle->id }})" class="text-gray-400 hover:text-gray-300">Delete</button>
