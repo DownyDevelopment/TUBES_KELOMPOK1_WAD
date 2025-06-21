@@ -140,38 +140,38 @@
 
     <!-- Add Vehicle Modal -->
     <div id="addVehicleModal" class="hidden fixed inset-0 bg-black bg-opacity-50 flex items-center justify-center">
-        <div class="bg-gray-900 rounded-lg p-8 max-w-md w-full">
-            <h3 class="text-xl font-bold text-white mb-4">Add New Vehicle</h3>
+        <div class="bg-white rounded-lg p-8 max-w-md w-full">
+            <h3 class="text-xl font-bold text-gray-800 mb-4">Add New Vehicle</h3>
             <form action="{{ route('vehicles.store') }}" method="POST">
                 @csrf
                 <div class="space-y-4">
                     <div>
-                        <label class="block text-sm font-medium text-gray-300">Student Name</label>
-                        <input type="text" name="student_name" class="mt-1 block w-full rounded-md bg-gray-800 border-gray-700 text-white shadow-sm focus:border-purple-500 focus:ring-purple-500">
+                        <label class="block text-sm font-medium text-gray-700">Student Name</label>
+                        <input type="text" name="student_name" class="mt-1 block w-full rounded-md bg-white border-gray-300 text-black shadow-sm focus:border-purple-500 focus:ring-purple-500">
                     </div>
                     <div>
-                        <label class="block text-sm font-medium text-gray-300">Student ID</label>
-                        <input type="text" name="student_id" class="mt-1 block w-full rounded-md bg-gray-800 border-gray-700 text-white shadow-sm focus:border-purple-500 focus:ring-purple-500">
+                        <label class="block text-sm font-medium text-gray-700">Student ID</label>
+                        <input type="text" name="student_id" class="mt-1 block w-full rounded-md bg-white border-gray-300 text-black shadow-sm focus:border-purple-500 focus:ring-purple-500">
                     </div>
                     <div>
-                        <label class="block text-sm font-medium text-gray-300">License Plate</label>
-                        <input type="text" name="license_plate" class="mt-1 block w-full rounded-md bg-gray-800 border-gray-700 text-white shadow-sm focus:border-purple-500 focus:ring-purple-500">
+                        <label class="block text-sm font-medium text-gray-700">License Plate</label>
+                        <input type="text" name="license_plate" class="mt-1 block w-full rounded-md bg-white border-gray-300 text-black shadow-sm focus:border-purple-500 focus:ring-purple-500">
                     </div>
                     <div>
-                        <label class="block text-sm font-medium text-gray-300">Brand</label>
-                        <input type="text" name="brand" class="mt-1 block w-full rounded-md bg-gray-800 border-gray-700 text-white shadow-sm focus:border-purple-500 focus:ring-purple-500">
+                        <label class="block text-sm font-medium text-gray-700">Brand</label>
+                        <input type="text" name="brand" class="mt-1 block w-full rounded-md bg-white border-gray-300 text-black shadow-sm focus:border-purple-500 focus:ring-purple-500">
                     </div>
                     <div>
-                        <label class="block text-sm font-medium text-gray-300">Model</label>
-                        <input type="text" name="model" class="mt-1 block w-full rounded-md bg-gray-800 border-gray-700 text-white shadow-sm focus:border-purple-500 focus:ring-purple-500">
+                        <label class="block text-sm font-medium text-gray-700">Model</label>
+                        <input type="text" name="model" class="mt-1 block w-full rounded-md bg-white border-gray-300 text-black shadow-sm focus:border-purple-500 focus:ring-purple-500">
                     </div>
                     <div>
-                        <label class="block text-sm font-medium text-gray-300">Color</label>
-                        <input type="text" name="color" class="mt-1 block w-full rounded-md bg-gray-800 border-gray-700 text-white shadow-sm focus:border-purple-500 focus:ring-purple-500">
+                        <label class="block text-sm font-medium text-gray-700">Color</label>
+                        <input type="text" name="color" class="mt-1 block w-full rounded-md bg-white border-gray-300 text-black shadow-sm focus:border-purple-500 focus:ring-purple-500">
                     </div>
                     <div>
-                        <label class="block text-sm font-medium text-gray-300">Vehicle Type</label>
-                        <select name="vehicle_type" class="mt-1 block w-full rounded-md bg-gray-800 border-gray-700 text-white shadow-sm focus:border-purple-500 focus:ring-purple-500">
+                        <label class="block text-sm font-medium text-gray-700">Vehicle Type</label>
+                        <select name="vehicle_type" class="mt-1 block w-full rounded-md bg-white border-gray-300 text-black shadow-sm focus:border-purple-500 focus:ring-purple-500">
                             <option value="car">Car</option>
                             <option value="motorcycle">Motorcycle</option>
                         </select>
@@ -179,7 +179,7 @@
                 </div>
                 <div class="mt-6 flex justify-end space-x-3">
                     <button type="button" onclick="document.getElementById('addVehicleModal').classList.add('hidden')"
-                            class="px-4 py-2 border border-gray-600 rounded-md text-gray-300 hover:bg-gray-800">
+                            class="px-4 py-2 border border-gray-300 rounded-md text-gray-700 hover:bg-gray-50">
                         Cancel
                     </button>
                     <button type="submit" class="px-4 py-2 bg-yellow-400 text-black rounded-md hover:bg-yellow-300">
@@ -192,39 +192,39 @@
 
     <!-- Edit Vehicle Modal -->
     <div id="editVehicleModal" class="hidden fixed inset-0 bg-black bg-opacity-50 flex items-center justify-center">
-        <div class="bg-gray-900 rounded-lg p-8 max-w-md w-full">
-            <h3 class="text-xl font-bold text-white mb-4">Edit Vehicle</h3>
+        <div class="bg-white rounded-lg p-8 max-w-md w-full">
+            <h3 class="text-xl font-bold text-gray-800 mb-4">Edit Vehicle</h3>
             <form id="editVehicleForm" method="POST">
                 @csrf
                 @method('PUT')
                 <div class="space-y-4">
                     <div>
-                        <label class="block text-sm font-medium text-gray-300">Student Name</label>
-                        <input type="text" name="student_name" id="edit_student_name" class="mt-1 block w-full rounded-md bg-gray-800 border-gray-700 text-white shadow-sm focus:border-purple-500 focus:ring-purple-500">
+                        <label class="block text-sm font-medium text-gray-700">Student Name</label>
+                        <input type="text" name="student_name" id="edit_student_name" class="mt-1 block w-full rounded-md bg-white border-gray-300 text-black shadow-sm focus:border-purple-500 focus:ring-purple-500">
                     </div>
                     <div>
-                        <label class="block text-sm font-medium text-gray-300">Student ID</label>
-                        <input type="text" name="student_id" id="edit_student_id" class="mt-1 block w-full rounded-md bg-gray-800 border-gray-700 text-white shadow-sm focus:border-purple-500 focus:ring-purple-500">
+                        <label class="block text-sm font-medium text-gray-700">Student ID</label>
+                        <input type="text" name="student_id" id="edit_student_id" class="mt-1 block w-full rounded-md bg-white border-gray-300 text-black shadow-sm focus:border-purple-500 focus:ring-purple-500">
                     </div>
                     <div>
-                        <label class="block text-sm font-medium text-gray-300">License Plate</label>
-                        <input type="text" name="license_plate" id="edit_license_plate" class="mt-1 block w-full rounded-md bg-gray-800 border-gray-700 text-white shadow-sm focus:border-purple-500 focus:ring-purple-500">
+                        <label class="block text-sm font-medium text-gray-700">License Plate</label>
+                        <input type="text" name="license_plate" id="edit_license_plate" class="mt-1 block w-full rounded-md bg-white border-gray-300 text-black shadow-sm focus:border-purple-500 focus:ring-purple-500">
                     </div>
                     <div>
-                        <label class="block text-sm font-medium text-gray-300">Brand</label>
-                        <input type="text" name="brand" id="edit_brand" class="mt-1 block w-full rounded-md bg-gray-800 border-gray-700 text-white shadow-sm focus:border-purple-500 focus:ring-purple-500">
+                        <label class="block text-sm font-medium text-gray-700">Brand</label>
+                        <input type="text" name="brand" id="edit_brand" class="mt-1 block w-full rounded-md bg-white border-gray-300 text-black shadow-sm focus:border-purple-500 focus:ring-purple-500">
                     </div>
                     <div>
-                        <label class="block text-sm font-medium text-gray-300">Model</label>
-                        <input type="text" name="model" id="edit_model" class="mt-1 block w-full rounded-md bg-gray-800 border-gray-700 text-white shadow-sm focus:border-purple-500 focus:ring-purple-500">
+                        <label class="block text-sm font-medium text-gray-700">Model</label>
+                        <input type="text" name="model" id="edit_model" class="mt-1 block w-full rounded-md bg-white border-gray-300 text-black shadow-sm focus:border-purple-500 focus:ring-purple-500">
                     </div>
                     <div>
-                        <label class="block text-sm font-medium text-gray-300">Color</label>
-                        <input type="text" name="color" id="edit_color" class="mt-1 block w-full rounded-md bg-gray-800 border-gray-700 text-white shadow-sm focus:border-purple-500 focus:ring-purple-500">
+                        <label class="block text-sm font-medium text-gray-700">Color</label>
+                        <input type="text" name="color" id="edit_color" class="mt-1 block w-full rounded-md bg-white border-gray-300 text-black shadow-sm focus:border-purple-500 focus:ring-purple-500">
                     </div>
                     <div>
-                        <label class="block text-sm font-medium text-gray-300">Vehicle Type</label>
-                        <select name="vehicle_type" id="edit_vehicle_type" class="mt-1 block w-full rounded-md bg-gray-800 border-gray-700 text-white shadow-sm focus:border-purple-500 focus:ring-purple-500">
+                        <label class="block text-sm font-medium text-gray-700">Vehicle Type</label>
+                        <select name="vehicle_type" id="edit_vehicle_type" class="mt-1 block w-full rounded-md bg-white border-gray-300 text-black shadow-sm focus:border-purple-500 focus:ring-purple-500">
                             <option value="car">Car</option>
                             <option value="motorcycle">Motorcycle</option>
                         </select>
@@ -232,7 +232,7 @@
                 </div>
                 <div class="mt-6 flex justify-end space-x-3">
                     <button type="button" onclick="document.getElementById('editVehicleModal').classList.add('hidden')"
-                            class="px-4 py-2 border border-gray-600 rounded-md text-gray-300 hover:bg-gray-800">
+                            class="px-4 py-2 border border-gray-300 rounded-md text-gray-700 hover:bg-gray-50">
                         Cancel
                     </button>
                     <button type="submit" class="px-4 py-2 bg-yellow-400 text-black rounded-md hover:bg-yellow-300">
@@ -245,15 +245,15 @@
 
     <!-- Delete Confirmation Modal -->
     <div id="deleteConfirmModal" class="hidden fixed inset-0 bg-black bg-opacity-50 flex items-center justify-center">
-        <div class="bg-gray-900 rounded-lg p-8 max-w-md w-full">
-            <h3 class="text-xl font-bold text-white mb-4">Confirm Delete</h3>
-            <p class="text-gray-300 mb-6">Are you sure you want to delete this vehicle? This action cannot be undone.</p>
+        <div class="bg-white rounded-lg p-8 max-w-md w-full">
+            <h3 class="text-xl font-bold text-gray-800 mb-4">Confirm Delete</h3>
+            <p class="text-gray-600 mb-6">Are you sure you want to delete this vehicle? This action cannot be undone.</p>
             <form id="deleteVehicleForm" method="POST">
                 @csrf
                 @method('DELETE')
                 <div class="flex justify-end space-x-3">
                     <button type="button" onclick="document.getElementById('deleteConfirmModal').classList.add('hidden')"
-                            class="px-4 py-2 border border-gray-600 rounded-md text-gray-300 hover:bg-gray-800">
+                            class="px-4 py-2 border border-gray-300 rounded-md text-gray-700 hover:bg-gray-50">
                         Cancel
                     </button>
                     <button type="submit" class="px-4 py-2 bg-red-600 text-white rounded-md hover:bg-red-700">
