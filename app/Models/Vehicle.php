@@ -14,5 +14,6 @@ class Vehicle extends Model
         'student_name',
         'student_id',
         'vehicle_type',
+       # 'vehicle_status',
     ];
 } 
